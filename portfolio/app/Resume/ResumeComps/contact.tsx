@@ -1,61 +1,70 @@
 import React from "react";
+import { MdOutlineArrowOutward, MdSend } from "react-icons/md";
 import { TbMailStar } from "react-icons/tb";
+import Link from "next/link";
 
 function Contact() {
   return (
     <div className="p-4 rounded-xl shadow-md border bg-white flex flex-col gap-2">
       <h2 className="text-[1.5rem] font-semibold flex gap-2 items-center text-black">
-        <span><TbMailStar /></span>
+        <span>
+          <TbMailStar />
+        </span>
         Get in Touch
       </h2>
-      <div>
-        <label className="input validator">
-  <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      strokeLinejoin="round"
-      strokeLinecap="round"
-      strokeWidth="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-    </g>
-  </svg>
-  <input type="email" placeholder="mail@site.com" required />
-</label>
-<div className="validator-hint hidden">Enter valid email address</div>
-
+<div className="flex">
+      {/* Top Links */}
+      <div className="flex w-[50%] gap-4 flex-wrap justify-center">
+        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
+          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">GITHUB</span>
+          <p className="pt-5">PowaAaAaaaaaaA</p>
+          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
+        </Link>
+        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
+          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">LINKEDIN</span>
+          <p className="pt-5">Mike Brian Mayo</p>
+          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
+        </Link>
+        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
+          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">EMAIL</span>
+          <p className="pt-5">Mikemayo482@gmail.com</p>
+          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
+        </Link>
+        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
+          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">DISCORD</span>
+          <p className="pt-5">mykeeexd</p>
+          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
+        </Link>
       </div>
-      <label className="input validator">
-  <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      strokeLinejoin="round"
-      strokeLinecap="round"
-      strokeWidth="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-      <circle cx="12" cy="7" r="4"></circle>
-    </g>
-  </svg>
+
+      {/* Contact Form */}
+<form className="flex flex-col gap-3 w-[50%] px-7 text-black">
   <input
     type="text"
+    name="name"
+    placeholder="Your Name"
+    className="input input-neutral"
     required
-    placeholder="Username"
-    pattern="[A-Za-z][A-Za-z0-9\-]*"
-
-    title="Only letters, numbers or dash"
   />
-</label>
-<p className="validator-hint">
-  Must be 3 to 30 characters
-  <br />containing only letters, numbers or dash
-</p>
-      <textarea placeholder="Neutral" className="textarea textarea-neutral"></textarea>
-      
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    className="input input-neutral"
+    required
+  />
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    className="textarea textarea-sm min-h-[120px]"
+    required
+  />
+  <button type="submit" className="btn btn-soft btn-primary">
+    Send Message
+  </button>
+</form>
     </div>
+</div>
   );
 }
 

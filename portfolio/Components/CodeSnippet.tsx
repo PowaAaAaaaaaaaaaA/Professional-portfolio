@@ -2,7 +2,7 @@ import React from "react";
 
 function CodeSnippet() {
   return (
-    <div className="w-full rounded-xl shadow-lg">
+    <div className="w-full rounded-xl shadow-lg fade-in-right-normal">
       {/* Title Bar */}
       <div className="flex flex-row justify-between bg-[#1e1e2e] rounded-tl-xl rounded-tr-xl items-center px-4 py-2.5">
         <div className="flex flex-row gap-1.5">
