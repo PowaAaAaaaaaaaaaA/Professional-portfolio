@@ -13,6 +13,7 @@ import { GoProjectRoadmap } from "react-icons/go";
 import Certificates from "./ResumeComps/Certificates";
 import BeyondTheScreen from "./ResumeComps/BeyondTheScreen";
 import Projects from "./ResumeComps/projects";
+import ChatBubble from "./ResumeComps/ChatBubble";
 
 // backdrop-blur-[2px]
 
@@ -101,6 +102,7 @@ As a fresh graduate, I'm continuously learning and improving, focused on buildin
   <p className="italic">"Code is not just what it does, but how it feels."</p>
   <p className="mt-2">— Built and designed by Mykeee © 2026</p>
 </footer>
+<ChatBubble/>
     </main>
   );
 }

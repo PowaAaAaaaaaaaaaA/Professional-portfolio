@@ -12,9 +12,8 @@ function Contact() {
         </span>
         Get in Touch
       </h2>
-<div className="flex">
       {/* Top Links */}
-      <div className="flex w-[50%] gap-4 flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center flex-col gap-4">
         <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
           <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">GITHUB</span>
           <p className="pt-5">PowaAaAaaaaaaA</p>
@@ -38,7 +37,7 @@ function Contact() {
       </div>
 
       {/* Contact Form */}
-<form className="flex flex-col gap-3 w-[50%] px-7 text-black">
+{/* <form className="flex flex-col gap-3 w-[50%] px-7 text-black">
   <input
     type="text"
     name="name"
@@ -62,9 +61,8 @@ function Contact() {
   <button type="submit" className="btn btn-soft btn-primary">
     Send Message
   </button>
-</form>
+</form> */}
     </div>
-</div>
   );
 }
 

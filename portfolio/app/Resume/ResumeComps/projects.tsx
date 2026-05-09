@@ -10,19 +10,19 @@ function Projects() {
         </span>
         Projects
       </h2>
-      <div className="grid grid-cols-[45%_45%] gap-4 justify-center max-h-[60vh] overflow-y-auto">
+      <div className="grid grid-cols-[45%_45%] gap-4 justify-center max-h-[60vh] overflow-y-auto items-stretch">
 
 {/*Project 1*/}
 <div className="drawer drawer-end">
   <input id="my-drawer-5" type="checkbox" className="drawer-toggle text-2xl" />
-  <div className="drawer-content">
+ <div className="drawer-content h-full">
     {/* Page content here */}
             <div className="card bg-[#F9F8F6] w-full shadow-sm text-black">
-          <figure>
+          <figure className="h-30 overflow-hidden">
             <img
               src="/Imgs/Portfolio/PortFolio.png"
               alt="Devlab"
-              className="w-full object-cover"
+              className="w-full h-full object-cover"
             />
           </figure>
           <div className="card-body">
@@ -100,14 +100,14 @@ function Projects() {
 {/*Project 2*/}
 <div className="drawer drawer-end">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle text-2xl" />
-  <div className="drawer-content">
+ <div className="drawer-content h-full">
     {/* Page content here */}
             <div className="card bg-[#F9F8F6] w-full shadow-sm text-black">
-          <figure>
+          <figure className="h-30 overflow-hidden">
             <img
               src="/Imgs/FRVA/FRVA1.png"
-              alt="Devlab"
-              className="w-full object-cover"
+              alt="FRVA"
+              className="w-full h-full object-cover"
             />
           </figure>
           <div className="card-body">
@@ -186,14 +186,14 @@ function Projects() {
 {/*Project 3*/}
 <div className="drawer drawer-end">
   <input id="my-drawer-5" type="checkbox" className="drawer-toggle text-2xl" />
-  <div className="drawer-content">
+ <div className="drawer-content h-full">
     {/* Page content here */}
             <div className="card bg-[#F9F8F6] w-full shadow-sm text-black">
-          <figure>
+          <figure className="h-30 overflow-hidden">
             <img
               src="/Imgs/Portfolio/PortFolio.png"
               alt="Devlab"
-              className="w-full object-cover"
+              className="w-full h-full object-cover"
             />
           </figure>
           <div className="card-body">
@@ -271,14 +271,14 @@ function Projects() {
 {/*Project 4*/}
 <div className="drawer drawer-end">
   <input id="my-drawer-5" type="checkbox" className="drawer-toggle text-2xl" />
-  <div className="drawer-content">
+ <div className="drawer-content h-full">
     {/* Page content here */}
             <div className="card bg-[#F9F8F6] w-full shadow-sm text-black">
-          <figure>
+          <figure className="h-30 overflow-hidden">
             <img
               src="/Imgs/Portfolio/PortFolio.png"
               alt="Devlab"
-              className="w-full object-cover"
+              className="w-full h-full object-cover"
             />
           </figure>
           <div className="card-body">
