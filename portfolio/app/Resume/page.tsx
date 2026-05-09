@@ -26,7 +26,7 @@ function page() {
           <div className="">
             <Image
               className="border-3 border-black rounded-2xl"
-              src="/Imgs/Myke.jpg"
+              src="/Imgs/Myke1.png"
               alt="Myke"
               width={180}
               height={180}
