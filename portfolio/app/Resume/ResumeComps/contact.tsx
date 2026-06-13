@@ -1,67 +1,92 @@
 import React from "react";
-import { MdOutlineArrowOutward, MdSend } from "react-icons/md";
+import { MdOutlineArrowOutward } from "react-icons/md";
 import { TbMailStar } from "react-icons/tb";
+import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import Link from "next/link";
+
+const links = [
+  {
+    label: "GITHUB",
+    value: "PowaAaAaaaaaaA",
+    href: "https://github.com/PowaAaAaaaaaaaaaA",
+    icon: <FaGithub className="text-[1.2rem]" />,
+    accent: "#24292e",
+  },
+  {
+    label: "LINKEDIN",
+    value: "Mike Brian Mayo",
+    href: "https://www.linkedin.com/in/mike-brian-mayo/",
+    icon: <FaLinkedin className="text-[1.2rem]" />,
+    accent: "#0077b5",
+  },
+  {
+    label: "EMAIL",
+    value: "Mikemayo482@gmail.com",
+    href: "mailto:Mikemayo482@gmail.com",
+    icon: <MdEmail className="text-[1.2rem]" />,
+    accent: "#e84343",
+  },
+  {
+    label: "DISCORD",
+    value: "mykeeexd",
+    href: "#",
+    icon: <FaDiscord className="text-[1.2rem]" />,
+    accent: "#5865f2",
+  },
+];
 
 function Contact() {
   return (
-    <div className="p-4 rounded-xl shadow-md border bg-white flex flex-col gap-2">
-      <h2 className="text-[1.5rem] font-semibold flex gap-2 items-center text-black">
-        <span>
+    <div className="p-5 rounded-xl shadow-md border bg-white flex flex-col gap-4 h-full">
+      {/* Header */}
+      <div className="flex items-center gap-3">
+        <span className="p-2 bg-orange-50 rounded-lg border border-orange-100 shadow-sm text-orange-600">
           <TbMailStar />
         </span>
-        Get in Touch
-      </h2>
-      {/* Top Links */}
-      <div className="flex flex-wrap justify-center flex-col gap-4">
-        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
-          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">GITHUB</span>
-          <p className="pt-5">PowaAaAaaaaaaA</p>
-          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
-        </Link>
-        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
-          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">LINKEDIN</span>
-          <p className="pt-5">Mike Brian Mayo</p>
-          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
-        </Link>
-        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
-          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">EMAIL</span>
-          <p className="pt-5">Mikemayo482@gmail.com</p>
-          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
-        </Link>
-        <Link href="https://github.com/PowaAaAaaaaaaaaaA" target="_blank" className="btn btn-neutral btn-outline lg:w-[100%] md:w-[25%] relative flex justify-between py-5">
-          <span className="text-[0.5rem] text-gray-600 absolute top-2 left-4">DISCORD</span>
-          <p className="pt-5">mykeeexd</p>
-          <p><MdOutlineArrowOutward className="text-[1.3rem]" /></p>
-        </Link>
+        <h2 className="text-[1.3rem] font-semibold text-black tracking-tight">
+          Get in Touch
+        </h2>
       </div>
 
-      {/* Contact Form */}
-{/* <form className="flex flex-col gap-3 w-[50%] px-7 text-black">
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    className="input input-neutral"
-    required
-  />
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    className="input input-neutral"
-    required
-  />
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    className="textarea textarea-sm min-h-[120px]"
-    required
-  />
-  <button type="submit" className="btn btn-soft btn-primary">
-    Send Message
-  </button>
-</form> */}
+      <p className="text-gray-400 text-xs tracking-widest uppercase border-b pb-3">
+        Let's connect and build something great
+      </p>
+
+      {/* Links */}
+      <div className="flex flex-col gap-3 flex-1">
+        {links.map(({ label, value, href, icon, accent }) => (
+          <Link
+            key={label}
+            href={href}
+            target="_blank"
+            className="group flex-1 flex items-center justify-between px-4 py-3 rounded-lg border border-gray-100 bg-gray-50 hover:bg-white hover:border-gray-300 hover:shadow-sm transition-all duration-200 cursor-pointer"
+          >
+            {/* Left: icon + text */}
+            <div className="flex items-center gap-3">
+              <span
+                className="p-2 rounded-md text-white transition-all duration-200"
+                style={{ backgroundColor: accent }}
+              >
+                {icon}
+              </span>
+              <div className="flex flex-col">
+                <span className="text-[0.6rem] text-gray-400 uppercase tracking-widest leading-none">
+                  {label}
+                </span>
+                <span className="text-sm font-medium text-gray-800 mt-0.5">
+                  {value}
+                </span>
+              </div>
+            </div>
+
+            {/* Right: arrow */}
+            <MdOutlineArrowOutward
+              className="text-gray-300 group-hover:text-gray-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 text-[1.1rem]"
+            />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

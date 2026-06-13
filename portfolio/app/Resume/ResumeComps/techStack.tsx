@@ -22,9 +22,9 @@ import { BsClaude } from "react-icons/bs";
 
 function TechStack() {
   return (
-    <div className="p-4 rounded-xl shadow-md border flex flex-col gap-2 bg-white">
-      <h2 className="text-[1.5rem] font-semibold flex gap-2 items-center text-black">
-        <span>
+    <div className="p-4 rounded-xl shadow-md border flex flex-col gap-2 bg-white fade-in-left-normal">
+      <h2 className="text-[1.5rem] font-semibold flex gap-3 items-center text-black">
+        <span className="p-2 bg-teal-50 rounded-lg border border-teal-100 shadow-sm text-teal-600">
           <TbAutomaticGearbox />
         </span>
         Tech Toolkit
